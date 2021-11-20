@@ -1,0 +1,23 @@
+Package: summaryTable
+Title: Simple generation of summary statistics
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Charlotte",
+            family = "Barclay",
+            role = c("aut", "cre"), 
+            email = "cbarcl01@student.ubc.ca",
+            comment = c(ORCID = "https://orcid.org/0000-0001-8008-8249"))
+Description: This package provides a useful summary table of important statistics,
+ including the minimum and maximum values, the mean and the standard deviation - 
+ through the use of a simple function called summary_function. This function works
+ when you want to create the summary statistics simultaneously for a numerical 
+ variable 'y' when grouped by another variable 'cat', which reflects a condition
+ or categorical variable.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Suggests:
+  testthat (>= 3.0.0)
+Config/testthat/edition: 3
+
