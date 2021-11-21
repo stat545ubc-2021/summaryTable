@@ -8,7 +8,7 @@ Summary_function(data, cat, y)
 }
 \arguments{
 \item{data}{\itemize{
-\item refers to the dataset you want to create the summary statistics for.
+\item refers to the dataset that you want to create the summary statistics for.
 }}
 
 \item{cat}{\itemize{
@@ -23,8 +23,10 @@ Summary_function(data, cat, y)
 A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by categorical variable cat.
 }
 \description{
-This function will provide summary statistics, for a numerical variable y when grouped by another variable x.
-The statistics generated are; minimum, maximum, average (mean), range and standard deviation.
+This package provides a useful summary table of important statistics, including the minimum and maximum values,
+the mean and the standard deviation, through the use of a simple function called summary_function. This function works
+when you want to create the summary statistics simultaneously for a numerical variable 'y' when grouped by another
+variable 'cat', which reflects a condition or categorical variable.
 }
 \examples{
 Summary_function(gapminder::gapminder, country, lifeExp)
