@@ -8,7 +8,7 @@
 #' @params cat - refers to the category that you wish to group by.
 #' @params y - refers to the numerical variable that you wish to summarise, in relation to the groups defined in cat.
 #'
-#' @return A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by x.
+#' @return A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by categorical variable cat.
 #'
 #' @examples
 #' Summary_function(gapminder, country, lifeExp)
@@ -22,5 +22,5 @@ Summary_function <- function(data, cat, y){
               maximum = max({{ y }}, na.rm = TRUE),
               average = mean({{ y }}, na.rm = TRUE),
               range = (max({{ y }}) - min({{ y }})),
-              st_dev = sd({{ y }}, na.rm = TRUE))
+              st_dev = stats::sd({{ y }}, na.rm = TRUE))
 }

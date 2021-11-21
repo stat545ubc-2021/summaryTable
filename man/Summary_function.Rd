@@ -7,7 +7,7 @@
 Summary_function(data, cat, y)
 }
 \value{
-A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by x.
+A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by categorical variable cat.
 }
 \description{
 This function will provide summary statistics, for a numerical variable y when grouped by another variable x.
