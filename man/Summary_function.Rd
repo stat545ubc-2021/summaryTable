@@ -6,6 +6,19 @@
 \usage{
 Summary_function(data, cat, y)
 }
+\arguments{
+\item{data}{\itemize{
+\item refers to the dataset you want to create the summary statistics for.
+}}
+
+\item{cat}{\itemize{
+\item refers to the category that you wish to group by.
+}}
+
+\item{y}{\itemize{
+\item refers to the numerical variable that you wish to summarise, in relation to the groups defined in cat.
+}}
+}
 \value{
 A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by categorical variable cat.
 }
