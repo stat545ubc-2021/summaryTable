@@ -27,6 +27,6 @@ This function will provide summary statistics, for a numerical variable y when g
 The statistics generated are; minimum, maximum, average (mean), range and standard deviation.
 }
 \examples{
-Summary_function(gapminder, country, lifeExp)
+Summary_function(gapminder::gapminder, country, lifeExp)
 Summary_function(flow_sample, extreme_type, flow)
 }

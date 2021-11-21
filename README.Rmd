@@ -33,7 +33,7 @@ You can install the development version of summaryTable from [GitHub](https://gi
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jennybc/regexcite")
+devtools::install_github("stat545ubc-2021/summaryTable")
 ```
 
 ## Example

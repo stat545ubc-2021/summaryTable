@@ -11,13 +11,13 @@
 #' @return A summary table providing the  minimum, maximum, average (mean), range and standard deviation of variable y as grouped by categorical variable cat.
 #'
 #' @examples
-#' Summary_function(gapminder, country, lifeExp)
+#' Summary_function(gapminder::gapminder, country, lifeExp)
 #' Summary_function(flow_sample, extreme_type, flow)
 
 Summary_function <- function(data, cat, y){
   data %>%
     na.omit() %>%
-    group_by({{ cat }}) %>%
+    dplyr::group_by({{ cat }}) %>%
     dplyr::summarise(minimum = min({{ y }}, na.rm = TRUE),
               maximum = max({{ y }}, na.rm = TRUE),
               average = mean({{ y }}, na.rm = TRUE),
