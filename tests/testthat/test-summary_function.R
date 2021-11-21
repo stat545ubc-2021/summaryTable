@@ -1,5 +1,5 @@
 test_that("The sum of the maximums is greater than the minimums", {
-  expect_gte(sum(Summary_function(gapminder::gapminder, country, pop)$maximum) - sum(Summary_function(gapminder, country, pop)$minimum), 0)
+  expect_gte(sum(Summary_function(gapminder::gapminder, country, pop)$maximum) - sum(Summary_function(gapminder::gapminder, country, pop)$minimum), 0)
 
 })
 
