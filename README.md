@@ -12,10 +12,13 @@ the required steps for `Assignment B2` for partial fulfilment
 <!-- badges: end -->
 
 The aim of this package is to provide useful functions to make it easier
-to produce simple statistics for your datasets.
+to produce multiple summary statistics for your datasets,
+simultaneously.
 
-Currently it just includes the summary\_function() which outputs a table
-of the minimum and maximum values, mean and standard deviation.
+Currently it just includes the `summary_function()` which outputs a
+table of the minimum and maximum values, mean and standard deviation.
+This will be expanded in future assignments for
+[STAT545B](https://stat545.stat.ubc.ca/course/).
 
 ## Installation
 
@@ -24,26 +27,43 @@ You can install the development version of summaryTable from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jennybc/regexcite")
+devtools::install_github("stat545ubc-2021/summaryTable")
 ```
 
-## Example
+## Usage
 
 Often when looking at large datasets with multiple conditions or
 categories, it can be difficult to visualise patterns. This package
-helps by outputting a summary table for a ***numerical variable*** as
-grouped by a condition.
+helps by outputting a useful summary table of important statistics,
+through the use of a simple function called `summary_function()`.
 
-Below is a basic example which shows you how to generate a common
-problem:
+The function outputs the minimum and maximum values, the mean and the
+standard deviation for a numerical variable **y** of interest as grouped
+by a categorical variable or condition **cat**.
+
+The following is a basic example which uses the gapminder dataset
+package to show how to generate a summary. The code below will generate
+an output summary of the minimum and maximum values, mean and standard
+deviation for life expectancy variable **lifeExp** by the country
+variable **country**:
 
 ``` r
 library(summaryTable)
-## basic example code
+library(gapminder)
+#> Warning: package 'gapminder' was built under R version 4.1.1
+Summary_function(gapminder, country, lifeExp)
+#> # A tibble: 142 x 6
+#>    country     minimum maximum average range st_dev
+#>    <fct>         <dbl>   <dbl>   <dbl> <dbl>  <dbl>
+#>  1 Afghanistan    28.8    43.8    37.5  15.0   5.10
+#>  2 Albania        55.2    76.4    68.4  21.2   6.32
+#>  3 Algeria        43.1    72.3    59.0  29.2  10.3 
+#>  4 Angola         30.0    42.7    37.9  12.7   4.01
+#>  5 Argentina      62.5    75.3    69.1  12.8   4.19
+#>  6 Australia      69.1    81.2    74.7  12.1   4.15
+#>  7 Austria        66.8    79.8    73.1  13.0   4.38
+#>  8 Bahrain        50.9    75.6    65.6  24.7   8.57
+#>  9 Bangladesh     37.5    64.1    49.8  26.6   9.03
+#> 10 Belgium        68      79.4    73.6  11.4   3.78
+#> # ... with 132 more rows
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.

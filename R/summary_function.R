@@ -1,10 +1,12 @@
 #' @export
 #' @title Group Summary Statistics
 #'
-#' @description This function will provide summary statistics, for a numerical variable y when grouped by another variable x.
-#' The statistics generated are; minimum, maximum, average (mean), range and standard deviation.
+#' @description This package provides a useful summary table of important statistics, including the minimum and maximum values,
+#'  the mean and the standard deviation, through the use of a simple function called summary_function. This function works
+#'   when you want to create the summary statistics simultaneously for a numerical variable 'y' when grouped by another
+#'   variable 'cat', which reflects a condition or categorical variable.
 #'
-#' @param data - refers to the dataset you want to create the summary statistics for.
+#' @param data - refers to the dataset that you want to create the summary statistics for.
 #' @param cat - refers to the category that you wish to group by.
 #' @param y - refers to the numerical variable that you wish to summarise, in relation to the groups defined in cat.
 #'
